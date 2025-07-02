@@ -1,95 +1,102 @@
-# fps-limit-gsync-tutorial
+# fps-limit-gsync-tutorial 🎮⚡
 
-## Guia Completo: Como Limitar FPS com RTSS para Melhorar a Experiência com G-Sync
-
-### 1. Introdução
-
-Este tutorial explica, de forma simples e direta, como usar o **RTSS (RivaTuner Statistics Server)** para limitar o FPS dos seus jogos, garantindo que o **G-Sync funcione de maneira ideal**. O objetivo é eliminar tearing, stuttering e reduzir input lag, proporcionando uma jogabilidade mais suave.
+## Guia Completo: Como Limitar FPS com RTSS para Turbinar seu G-Sync e Jogar Suave
 
 ---
 
-### 2. Por que limitar FPS ajuda com G-Sync?
+### Olá, gamer!
 
-- **G-Sync sincroniza a taxa de atualização do monitor com o número de frames gerados pela GPU.**  
-- Quando o FPS ultrapassa o máximo que o monitor pode exibir (ex: mais de 144 FPS num monitor 144Hz), o G-Sync desativa e o V-Sync do driver entra em ação, causando input lag e tearing.  
-- Limitar FPS para um valor **um pouco abaixo do refresh rate do monitor** mantém o FPS dentro do range de funcionamento do G-Sync, eliminando tearing e reduzindo lag.
+Se você curte jogar com o mínimo de lag, sem aquele famoso *tearing* e engasgos, e quer entender **por que limitar o FPS do seu jogo ajuda o G-Sync a funcionar melhor**, você está no lugar certo!  
 
----
-
-### 3. Ferramentas necessárias
-
-- **RTSS (RivaTuner Statistics Server):** Para limitar o FPS facilmente.  
-- **Painel de controle NVIDIA:** Para configurar G-Sync e V-Sync corretamente.  
-- Seu jogo favorito.
+Este tutorial é para **qualquer pessoa** que queira configurar tudo do jeito certo, com calma e explicações fáceis — mesmo que você não seja um expert em hardware.
 
 ---
 
-### 4. Instalando o RTSS
+## 1. Por que limitar FPS ajuda o G-Sync?
 
-- Baixe no site oficial:  
-  [Guru3D RTSS](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html)  
-- Instale e execute o programa.
-
----
-
-### 5. Configurando o Painel de Controle NVIDIA
-
-#### Ativar G-Sync:
-
-1. Abra o **Painel de Controle NVIDIA** (clicando com o botão direito na área de trabalho).  
-2. Vá em **Display > Configurar G-SYNC**.  
-3. Marque:  
-   - “Ativar G-SYNC, G-SYNC Compatible”.  
-   - “Ativar para modo tela cheia e janela” (para suportar jogos em ambos os modos).  
-4. Confirme seu monitor na lista.
-
-#### Configurar V-Sync:
-
-1. Vá para **Gerenciar configurações 3D**.  
-2. Encontre a opção **Sincronização vertical**.  
-3. Defina como **Ligado** — para servir como fallback caso o FPS ultrapasse o limite do G-Sync.
+- O **G-Sync** sincroniza a frequência do seu monitor com os frames que a placa de vídeo entrega.  
+- Quando o jogo gera mais frames do que seu monitor consegue exibir (ex: 150 FPS em um monitor 144Hz), o G-Sync desliga e o V-Sync do driver NVIDIA assume.  
+- Isso pode causar **input lag** e aquele incômodo **tearing** (cortes na imagem).  
+- Limitando o FPS **alguns quadros abaixo** do refresh do seu monitor, você mantém o G-Sync sempre ativo e evita esses problemas.
 
 ---
 
-### 6. Configurando o RTSS para limitar FPS
+## 2. O que você vai precisar
 
-1. Abra o **RTSS**.  
-2. Para limitar FPS globalmente, selecione o perfil “**Global**”.  
-3. Para limitar um jogo específico:  
-   - Clique no botão “+”.  
-   - Selecione o executável do jogo.  
-4. No campo **“Framerate limit”**, insira:  
-   - Para monitor 144Hz: limite em **141 FPS** ou **140.7 FPS** para estabilidade extra.  
-   - Para monitor 60Hz: limite em **58 FPS** ou **57.9 FPS**.  
-   - Para qualquer outro refresh, limite 1-3 FPS abaixo do refresh rate nativo.  
-5. Deixe o RTSS aberto enquanto joga.
+- **RTSS (RivaTuner Statistics Server)**, pra limitar o FPS de forma fácil e prática.  
+- **Painel de Controle NVIDIA**, pra configurar o G-Sync e o V-Sync direito.  
+- Seu jogo favorito, pronto pra jogar no capricho.
 
 ---
 
-### 7. Configurações dentro do jogo
+## 3. Instalando o RTSS 🛠️
 
-- Desligue o V-Sync **dentro do jogo** para evitar conflitos com o V-Sync do driver.  
-- Use modo **tela cheia ou janela tela cheia** conforme sua preferência (janela tela cheia permite alt-tab rápido).
-
----
-
-### 8. Como funciona na prática
-
-- Limitar FPS mantém o G-Sync ativo todo o tempo.  
-- O V-Sync do driver só atua se o FPS ultrapassar o limite do monitor, prevenindo tearing.  
-- A experiência fica mais suave, com menos input lag e sem tearing.
+1. Acesse o site oficial e faça o download:  
+   [Guru3D RTSS Download](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html)  
+2. Instale o programa normalmente.  
+3. Execute o RTSS; ele vai ficar rodando em segundo plano.
 
 ---
 
-### 9. Dicas extras
+## 4. Configurando o Painel NVIDIA 🎛️
 
-- Use valores decimais no limite de FPS para maior precisão (ex: 140.7 FPS).  
-- Use o indicador de G-Sync no painel NVIDIA para verificar se está ativo.  
-- Ajuste o limite se perceber tearing ou input lag.
+### Ativando o G-Sync
+
+- Clique com o botão direito na área de trabalho e abra o **Painel de Controle NVIDIA**.  
+- Vá em **Display > Configurar G-SYNC**.  
+- Marque as opções:  
+  - “Ativar G-SYNC, G-SYNC Compatible”.  
+  - “Ativar para modo tela cheia e janela” (isso ajuda no modo janela tela cheia, que muita gente gosta por permitir alt-tab rápido).  
+- Selecione seu monitor na lista e confirme.
+
+### Configurando o V-Sync
+
+- Ainda no painel NVIDIA, vá para **Gerenciar configurações 3D**.  
+- Procure por **Sincronização vertical**.  
+- Coloque como **Ligado**.  
+- Isso funciona como um "plano B" para evitar tearing se seu FPS passar do refresh do monitor.
 
 ---
 
-### 10. Resumo rápido
+## 5. Configurando o RTSS para limitar FPS 🎯
+
+- Abra o RTSS.  
+- Se quiser limitar todos os jogos, selecione o perfil “Global”.  
+- Para limitar um jogo específico, clique no botão “+” e escolha o executável.  
+- No campo **Framerate limit**, coloque um valor:  
+  - Para monitor 144Hz: **141 FPS** (ou 140.7 para estabilidade extra).  
+  - Para monitor 60Hz: **58 FPS** (ou 57.9).  
+  - Para outros refresh rates, limite sempre 1 a 3 FPS abaixo do máximo.  
+- Deixe o RTSS aberto enquanto estiver jogando.
+
+---
+
+## 6. Configurações dentro do jogo 🎮
+
+- Desative o **V-Sync dentro do jogo**!  
+- Use o modo **tela cheia** ou **janela tela cheia** conforme sua preferência.  
+- O modo janela tela cheia ajuda bastante para alt-tab rápido, mas certifique-se que seu G-Sync está ativado para funcionar nesse modo (verifique no painel NVIDIA).
+
+---
+
+## 7. Por que isso funciona? ⚙️
+
+- Ao limitar o FPS um pouco abaixo do refresh do monitor, o G-Sync fica **sempre ativo** e sincroniza perfeitamente as imagens.  
+- Quando o FPS ultrapassa o limite do monitor, o V-Sync do driver entra para evitar tearing, mas pode gerar input lag.  
+- Esse balanceamento deixa a jogabilidade mais fluida, com imagem estável e resposta rápida.
+
+---
+
+## 8. Dicas extras para ficar tinindo ✨
+
+- O RTSS aceita valores decimais, tipo **140.7 FPS**, que ajuda a evitar micro variações que causam stutter.  
+- Use o **indicador de G-Sync** no painel NVIDIA para confirmar se está funcionando.  
+- Se sentir tearing, diminua o limite de FPS em 1 ou 2.  
+- Se sentir input lag, experimente diminuir o limite um pouco mais ou usar modo tela cheia exclusivo.
+
+---
+
+## 9. Resumo rápido
 
 | Configuração               | Valor/Status                                   |
 |---------------------------|------------------------------------------------|
@@ -101,10 +108,19 @@ Este tutorial explica, de forma simples e direta, como usar o **RTSS (RivaTuner 
 
 ---
 
-### 11. Referências
+## 10. Referências úteis 📚
 
 - [Guru3D RTSS Download](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html)  
-- [NVIDIA G-Sync](https://www.nvidia.com/en-us/geforce/news/gsync-ultimate-experience/)  
+- [NVIDIA G-Sync Overview](https://www.nvidia.com/en-us/geforce/news/gsync-ultimate-experience/)  
 - [Como limitar FPS para G-Sync - Fórum NVIDIA](https://www.nvidia.com/en-us/geforce/forums/game-ready-drivers/13/3148/how-to-properly-cap-fps-for-g-sync/)
 
 ---
+
+## Feito por você! 👑
+
+Esse tutorial foi cuidadosamente preparado por Sa0z, para ajudar gamers a extrair o máximo do seu hardware e jogar com máxima suavidade e resposta.  
+
+---
+
+Se quiser, posso ajudar a fazer a versão em inglês depois, só falar!  
+Bora jogar liso? 🚀
