@@ -116,11 +116,4 @@ Este tutorial é para **qualquer pessoa** que queira configurar tudo do jeito ce
 
 ---
 
-## Feito por você! 👑
 
-Esse tutorial foi cuidadosamente preparado por Sa0z, para ajudar gamers a extrair o máximo do seu hardware e jogar com máxima suavidade e resposta.  
-
----
-
-Se quiser, posso ajudar a fazer a versão em inglês depois, só falar!  
-Bora jogar liso? 🚀
